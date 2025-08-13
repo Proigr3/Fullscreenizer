@@ -1,0 +1,100 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "H:\\Projects\\Fullscreenizer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{97758F9D-5944-4789-A293-6454F4E23FC7}|Fullscreenizer\\Fullscreenizer.csproj|h:\\projects\\fullscreenizer\\fullscreenizer\\fullscreenizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{97758F9D-5944-4789-A293-6454F4E23FC7}|Fullscreenizer\\Fullscreenizer.csproj|solutionrelative:fullscreenizer\\fullscreenizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97758F9D-5944-4789-A293-6454F4E23FC7}|Fullscreenizer\\Fullscreenizer.csproj|H:\\Projects\\Fullscreenizer\\fullscreenizer\\fullscreenizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97758F9D-5944-4789-A293-6454F4E23FC7}|Fullscreenizer\\Fullscreenizer.csproj|solutionrelative:fullscreenizer\\fullscreenizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97758F9D-5944-4789-A293-6454F4E23FC7}|Fullscreenizer\\Fullscreenizer.csproj|H:\\Projects\\Fullscreenizer\\fullscreenizer\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97758F9D-5944-4789-A293-6454F4E23FC7}|Fullscreenizer\\Fullscreenizer.csproj|solutionrelative:fullscreenizer\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Fullscreenizer.cs [Design]",
+              "DocumentMoniker": "H:\\Projects\\Fullscreenizer\\Fullscreenizer\\Fullscreenizer.cs",
+              "RelativeDocumentMoniker": "Fullscreenizer\\Fullscreenizer.cs",
+              "ToolTip": "H:\\Projects\\Fullscreenizer\\Fullscreenizer\\Fullscreenizer.cs [Design]",
+              "RelativeToolTip": "Fullscreenizer\\Fullscreenizer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T11:30:28.583Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Fullscreenizer.cs",
+              "DocumentMoniker": "H:\\Projects\\Fullscreenizer\\Fullscreenizer\\Fullscreenizer.cs",
+              "RelativeDocumentMoniker": "Fullscreenizer\\Fullscreenizer.cs",
+              "ToolTip": "H:\\Projects\\Fullscreenizer\\Fullscreenizer\\Fullscreenizer.cs",
+              "RelativeToolTip": "Fullscreenizer\\Fullscreenizer.cs",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAiwNIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T11:33:12.27Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Config.cs",
+              "DocumentMoniker": "H:\\Projects\\Fullscreenizer\\Fullscreenizer\\Config.cs",
+              "RelativeDocumentMoniker": "Fullscreenizer\\Config.cs",
+              "ToolTip": "H:\\Projects\\Fullscreenizer\\Fullscreenizer\\Config.cs",
+              "RelativeToolTip": "Fullscreenizer\\Config.cs",
+              "ViewState": "AgIAAP0AAAAAAAAAAADwvxABAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T12:46:58.623Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 2548,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

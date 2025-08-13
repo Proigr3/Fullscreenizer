@@ -60,6 +60,41 @@ namespace Fullscreenizer
 			set{ _minimizeToTray = value; }
 		}
 
+		private decimal _wndsize_w;
+		public decimal WNDSize_W
+		{
+			get { return _wndsize_w; }
+			set { _wndsize_w = value; }
+		}
+
+		private decimal _wndsize_h;
+		public decimal WNDSize_H
+		{
+			get { return _wndsize_h; }
+			set { _wndsize_h = value; }
+		}
+
+		private decimal _monitorScale;
+		public decimal MonitorScale
+		{
+			get { return _monitorScale; }
+			set { _monitorScale = value; }
+		}
+
+		private decimal _wndmove_x;
+		public decimal WNDMove_X
+		{
+			get { return _wndmove_x; }
+			set { _wndmove_x = value; }
+		}
+
+		private decimal _wndmove_y;
+		public decimal WNDMove_Y
+		{
+			get { return _wndmove_y; }
+			set { _wndmove_y = value; }
+		}
+
 		private List<string> _classes = new List<string>();
 		public List<string> Classes
 		{
@@ -75,6 +110,11 @@ namespace Fullscreenizer
 			_scaleWindow = true;
 			_moveWindow = true;
 			_minimizeToTray = true;
+			_wndsize_w = 1920;
+			_wndsize_h = 1080;
+			_monitorScale = 100;
+			_wndmove_x = 0;
+			_wndmove_y = 0;
 			_classes.Clear();
 		}
 
@@ -162,6 +202,31 @@ namespace Fullscreenizer
 				return false;
 			}
 
+			if (((line = sr.ReadLine()) == null) || !decimal.TryParse(line, out _wndsize_w))
+			{
+				return false;
+			}
+
+			if (((line = sr.ReadLine()) == null) || !decimal.TryParse(line, out _wndsize_h))
+			{
+				return false;
+			}
+
+			if (((line = sr.ReadLine()) == null) || !decimal.TryParse(line, out _monitorScale))
+			{
+				return false;
+			}
+
+			if (((line = sr.ReadLine()) == null) || !decimal.TryParse(line, out _wndmove_x))
+			{
+				return false;
+			}
+
+			if (((line = sr.ReadLine()) == null) || !decimal.TryParse(line, out _wndmove_y))
+			{
+				return false;
+			}
+
 			return true;
 		}
 
@@ -191,6 +256,11 @@ namespace Fullscreenizer
 			sw.WriteLine(_scaleWindow.ToString());
 			sw.WriteLine(_moveWindow.ToString());
 			sw.WriteLine(_minimizeToTray.ToString());
+			sw.WriteLine(_wndsize_w.ToString());
+			sw.WriteLine(_wndsize_h.ToString());
+			sw.WriteLine(_monitorScale.ToString());
+			sw.WriteLine(_wndmove_x.ToString());
+			sw.WriteLine(_wndmove_y.ToString());
 			sw.Close();
 		}
 
@@ -203,7 +273,12 @@ namespace Fullscreenizer
 			sw.WriteLine(_scaleWindow.ToString());
 			sw.WriteLine(_moveWindow.ToString());
 			sw.WriteLine(_minimizeToTray.ToString());
-			foreach( string curr in _classes )
+			sw.WriteLine(_wndsize_w.ToString());
+			sw.WriteLine(_wndsize_h.ToString());
+			sw.WriteLine(_monitorScale.ToString());
+			sw.WriteLine(_wndmove_x.ToString());
+			sw.WriteLine(_wndmove_y.ToString());
+			foreach ( string curr in _classes )
 			{
 				sw.WriteLine(curr);
 			}

@@ -186,6 +186,31 @@ namespace Fullscreenizer
 			}
 		}
 
+		void num_wndsize_w_ValueChanged(object sender, EventArgs e)
+		{
+			_config.WNDSize_W = num_wndsize_w.Value;
+		}
+
+		void num_wndsize_h_ValueChanged(object sender, EventArgs e)
+		{
+			_config.WNDSize_H = num_wndsize_h.Value;
+		}
+
+		void num_monitorscale_ValueChanged(object sender, EventArgs e)
+		{
+			_config.MonitorScale = num_monitorscale.Value;
+		}
+
+		void num_wndmove_x_ValueChanged(object sender, EventArgs e)
+		{
+			_config.WNDMove_X = num_wndmove_x.Value;
+		}
+
+		void num_wndmove_y_ValueChanged(object sender, EventArgs e)
+		{
+			_config.WNDMove_Y = num_wndmove_y.Value;
+		}
+
 		void _windowUpdateTimer_Tick(object sender, EventArgs e)
 		{
 			refreshApps();
@@ -258,6 +283,13 @@ namespace Fullscreenizer
 			chk_scaleToFit.Checked     = _config.ScaleWindow;
 			chk_moveWindow.Checked     = _config.MoveWindow;
 			chk_minimizeToTray.Checked = _config.MinimizeToTray;
+
+			num_wndsize_w.Value		= _config.WNDSize_W;
+			num_wndsize_h.Value		= _config.WNDSize_H;
+			num_monitorscale.Value	= _config.MonitorScale;
+
+			num_wndmove_x.Value	= _config.WNDMove_X;
+			num_wndmove_y.Value	= _config.WNDMove_Y;
 		}
 
 		void buildKeysList()
@@ -604,20 +636,27 @@ namespace Fullscreenizer
 				// Make the window borderless.
 				Win32.makeWindowBorderless(hwnd);
 
-				if( chk_scaleToFit.Checked && chk_moveWindow.Checked )
+				float _scalar = (float)num_monitorscale.Value / 100f;
+
+				int _monitorX = num_wndmove_x.Value == 0 ? monitorX : (int)((float)num_wndmove_x.Value / _scalar);
+				int _monitorY = num_wndmove_y.Value == 0 ? monitorY : (int)((float)num_wndmove_y.Value / _scalar);
+				int _monitorWidth = num_wndsize_w.Value == 0 ? monitorWidth: (int)((float)num_wndsize_w.Value / _scalar);
+				int _monitorHeight = num_wndsize_h.Value == 0 ? monitorHeight : (int)((float)num_wndsize_h.Value / _scalar);
+
+				if ( chk_scaleToFit.Checked && chk_moveWindow.Checked )
 				{
 					// Move the window to the top-left of the monitor and scale it to fill.
-					Win32.setWindowPos(hwnd, monitorX, monitorY, monitorWidth, monitorHeight, Win32.SetWindowPosFlags.SWP_FRAMECHANGED);
+					Win32.setWindowPos(hwnd, _monitorX, _monitorY, _monitorWidth, _monitorHeight, Win32.SetWindowPosFlags.SWP_FRAMECHANGED);
 				}
 				else if( chk_scaleToFit.Checked && !chk_moveWindow.Checked )
 				{
 					// Only scale the window to fill and don't change the position.
-					Win32.setWindowPos(hwnd, monitorX, monitorY, monitorWidth, monitorHeight, Win32.SetWindowPosFlags.SWP_NOREPOSITION);
+					Win32.setWindowPos(hwnd, _monitorX, _monitorY, _monitorWidth, _monitorHeight, Win32.SetWindowPosFlags.SWP_NOREPOSITION);
 				}
 				else if( !chk_scaleToFit.Checked && chk_moveWindow.Checked )
 				{
 					// Only move the window and don't scale it.
-					Win32.setWindowPos(hwnd, monitorX, monitorY, monitorWidth, monitorHeight, Win32.SetWindowPosFlags.SWP_NOSIZE);
+					Win32.setWindowPos(hwnd, _monitorX, _monitorY, _monitorWidth, _monitorHeight, Win32.SetWindowPosFlags.SWP_NOSIZE);
 				}
 				// Otherwise, don't do anything.
 			}

@@ -44,10 +44,12 @@
 			this.lv_apps.FullRowSelect = true;
 			this.lv_apps.GridLines = true;
 			this.lv_apps.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-			this.lv_apps.Location = new System.Drawing.Point(6, 14);
+			this.lv_apps.HideSelection = false;
+			this.lv_apps.Location = new System.Drawing.Point(8, 17);
+			this.lv_apps.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.lv_apps.MultiSelect = false;
 			this.lv_apps.Name = "lv_apps";
-			this.lv_apps.Size = new System.Drawing.Size(328, 180);
+			this.lv_apps.Size = new System.Drawing.Size(436, 221);
 			this.lv_apps.Sorting = System.Windows.Forms.SortOrder.Ascending;
 			this.lv_apps.TabIndex = 0;
 			this.lv_apps.TabStop = false;
@@ -60,9 +62,10 @@
 			// 
 			// btn_addApp
 			// 
-			this.btn_addApp.Location = new System.Drawing.Point(6, 200);
+			this.btn_addApp.Location = new System.Drawing.Point(8, 246);
+			this.btn_addApp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.btn_addApp.Name = "btn_addApp";
-			this.btn_addApp.Size = new System.Drawing.Size(104, 23);
+			this.btn_addApp.Size = new System.Drawing.Size(139, 28);
 			this.btn_addApp.TabIndex = 1;
 			this.btn_addApp.TabStop = false;
 			this.btn_addApp.Text = "Add";
@@ -74,9 +77,11 @@
 			this.gb_apps.Controls.Add(this.txt_filter);
 			this.gb_apps.Controls.Add(this.btn_addApp);
 			this.gb_apps.Controls.Add(this.lv_apps);
-			this.gb_apps.Location = new System.Drawing.Point(7, 1);
+			this.gb_apps.Location = new System.Drawing.Point(9, 1);
+			this.gb_apps.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.gb_apps.Name = "gb_apps";
-			this.gb_apps.Size = new System.Drawing.Size(342, 230);
+			this.gb_apps.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.gb_apps.Size = new System.Drawing.Size(456, 283);
 			this.gb_apps.TabIndex = 1;
 			this.gb_apps.TabStop = false;
 			// 
@@ -84,21 +89,23 @@
 			// 
 			this.txt_filter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_filter.ForeColor = System.Drawing.SystemColors.GrayText;
-			this.txt_filter.Location = new System.Drawing.Point(116, 200);
+			this.txt_filter.Location = new System.Drawing.Point(155, 246);
+			this.txt_filter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.txt_filter.Name = "txt_filter";
-			this.txt_filter.Size = new System.Drawing.Size(218, 23);
+			this.txt_filter.Size = new System.Drawing.Size(289, 26);
 			this.txt_filter.TabIndex = 2;
 			this.txt_filter.TextChanged += new System.EventHandler(this.txt_filter_TextChanged);
 			this.txt_filter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_filter_KeyDown);
 			// 
 			// AllApps
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(355, 236);
+			this.ClientSize = new System.Drawing.Size(473, 290);
 			this.Controls.Add(this.gb_apps);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.MaximizeBox = false;
 			this.Name = "AllApps";
 			this.Load += new System.EventHandler(this.AllApps_Load);
