@@ -1,4 +1,6 @@
-# Fullscreenizer
+# Modified Fullscreenizer
+> With options to manually change the window's size and position.
+
 > Borderless fullscreen is a wonderful thing.
 
 A little tool for making games run in borderless fullscreen instead of windowed mode.
